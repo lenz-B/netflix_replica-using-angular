@@ -2,7 +2,7 @@
 
 <!-- component -->
 <app-banner [bannerTitle]="(bannerDetail$ | async)?.original_title" [bannerOverview]="(bannerDetail$ | async)?.overview" 
-></app-banner>
+    [key]="(bannerVideo$ | async)?.results[0].key"></app-banner>
 
 <app-movie-carousel [videoContents]="movies" [title]="'Popular on Netflix'"></app-movie-carousel>
 <app-movie-carousel [videoContents]="tvShows" [title]="'Trending TV Shows'"></app-movie-carousel>
