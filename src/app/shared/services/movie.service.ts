@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 
 interface MovieResponse {
   results: any[];
-  // Add other properties as needed
 }
 
 @Injectable({
@@ -36,7 +35,6 @@ export class MovieService {
   }
 
   getRatedMovies(): Observable<MovieResponse> {
-    // Note: This endpoint might need to be adjusted based on how rated movies work with bearer token auth
     return this.http.get<MovieResponse>(`${this.baseUrl}/account/{account_id}/rated/movies`, this.options);
   }
 
